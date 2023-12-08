@@ -6,7 +6,7 @@ import numpy as np
 
 class_list = {'0': 'Negative', '1': 'Neutral', '2':'Positive'}
 
-st.title('Sentiment analysis from Vietnamwsw student's feedback')
+st.title('Sentiment analysis from Vietnamwsw students feedback')
 
      
 input_ec = open('ec_vsfc.pkl','rb')
