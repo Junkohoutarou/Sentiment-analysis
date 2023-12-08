@@ -16,7 +16,7 @@ input_md = open('lrc_vsfc.pkl','rb')
 model = pkl.load(input_md)
 
 st.header('Write a feedback')
-txt=st.text_erea('','')
+txt= st.text_erea('','')
 
 if txt !='':
   if st.button('Predict'):
