@@ -9,10 +9,10 @@ class_list = {'0': 'Negative', '1': 'Neutral', '2':"Positive'}
 st.title('Sentiment analysis from Vietnamwsw students' feedback')
 
      
-input_ec = open('ec.vsfc.pkl','rb')
+input_ec = open('ec_vsfc.pkl','rb')
 encoder = pkl.load(input_ec)
 
-input_md = open('lrc.vsfc.pkl','rb')
+input_md = open('lrc_vsfc.pkl','rb')
 model = pkl.load(input_md)
 
 st.header('Write a feedback')
