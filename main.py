@@ -1,9 +1,8 @@
 import streamlit as st
 from PIL import Image
 import pickle as pkl
-import numpy as np
 
-class_list = {'0': 'Negative', '1': 'Neutral', '2': 'Positve'}
+class_list = {'0': 'Negative', '1': 'Neutral', '2': 'Positive'}
 with open("styles.css") as f:
     custom_css = f.read()
 st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
