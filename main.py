@@ -9,11 +9,9 @@ st.title('Sentiment analysis from Vietnamwsw students feedback')
 
 input_ec = open('ec_vsfc.pkl','rb')
 encoder = pkl.load(input_ec)
-input_ec.close()
 
 input_md = open('lrc_vsfc.pkl','rb')
 model = pkl.load(input_md)
-input_md.close()
 
 st.header('Write a feedback')
 txt = st.text_area('','')
