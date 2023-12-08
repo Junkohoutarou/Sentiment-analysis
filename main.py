@@ -4,24 +4,24 @@ import pickle as pkl
 import numpy as np
 
 
-class_list = {'0': 'Normal', '1': 'Pneumonia'}
+class_list = {'0': 'Negative', '1': 'Neutral', '2':"Positive'}
 
-st.title('Pneumonia Detection')
+st.title('Sentiment analysis from Vietnamwsw students' feedback')
 
-input = open('lrc_xray.pkl','rb')
-model = pkl.load(input)
+     
+input_ec = open('ec.vsfc.pkl','rb')
+encoder = pkl.load(input_ec)
 
-st.header('Upload an image')
-image = st.file_uploader('Choose an image', type=(['png', 'jpg', 'jpeg']))
+input_md = open('lrc.vsfc.pkl','rb')
+model = pkl.load(input_md)
 
-if image is not None:
-  image = Image.open(image)
-  st.image(image, caption='Test image')
+st.header('Write a feedback')
+txt=st.text.erea('','')
 
+if txt !='':
   if st.button('Predict'):
-    image = image.resize((227*227*3,1))
-    vector = np.array(image)
-    label= str((model.predict(vector))[0])
+    feature.vector= encoder.transform([txt])
+    label= str((model.predict(feature.vector))[0])
 
     st.header('Result')
     st.text(class_list[label])
