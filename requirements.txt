@@ -2,4 +2,4 @@ numpy
 pandas
 streamlit
 scikit-learn
-dbfdjfvsdfvlDFBVSL
+dbfdjfvsdfvlDFBVS
